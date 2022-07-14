@@ -1,7 +1,7 @@
-import { Box } from "@mui/material"
+import { Box, Checkbox } from "@mui/material"
 import { FormControl, FormLabel } from "react-bootstrap"
+import { ButtonComponent } from "../Components/ButtonComponent"
 import { ComboBoxComponents } from "../Components/ComboBoxComponents"
-import { DateInputComponent } from "../Components/DateInputComponents"
 import { FormControlComponent } from "../Components/FormControlComponent"
 
 export const RegisterPage = () => {
@@ -27,8 +27,10 @@ export const RegisterPage = () => {
             <div>
                 <FormControl className="form-control-date" type="date" id = "form-control-date-register"></FormControl>
             </div>
-            {/* <checkbox>*/}
-            <p>By checking the box, I agree that I have read and accepted the <span>Terms of Use</span> and <span>Privacy and Policy.</span></p>
+            <Checkbox className = "check-box"></Checkbox>
+            <p>By checking the box, I agree that I have read and accepted the <a href = "https://www.google.com">Terms of Use</a> and <a href = "https://www.google.com">Privacy and Policy.</a></p>
+            <p>Already have account? <a href = "https://www.google.com">Sign In</a></p>
+            <ButtonComponent variant="contained">Create a Account</ButtonComponent>
          </Box>
     )
 }

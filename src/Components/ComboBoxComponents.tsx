@@ -1,5 +1,4 @@
 import { Autocomplete, TextField } from "@mui/material"
-import { GenderBox } from "../Pages/RegisterPage"
 
 export const ComboBoxComponents = ({options, label} : {
     options : any
