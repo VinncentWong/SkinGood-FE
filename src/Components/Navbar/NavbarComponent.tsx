@@ -20,9 +20,15 @@ export const NavbarComponent = (): JSX.Element => {
                     <img src={IconSearch} alt="icon" className="icon-search"></img>
                 </InputGroup.Text>
             </InputGroup>
-            <img src = {BellIcon} alt="icon"></img>
-            <img src = {PersonIcon} alt="icon"></img>
-            <img src = {ShoppingCartIcon} alt="icon"></img>
+            <a href="https://www.google.com">
+                <img src = {BellIcon} alt="icon"></img>
+            </a>
+            <a href="https://www.google.com">
+                <img src = {PersonIcon} alt="icon"></img>
+            </a>
+            <a href="https://www.google.com">
+                <img src = {ShoppingCartIcon} alt="icon"></img>
+            </a>
         </div>
     );
 }

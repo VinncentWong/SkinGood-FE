@@ -1,18 +1,21 @@
-import { Autocomplete, TextField } from "@mui/material"
+import { InputLabel, MenuItem, Select } from "@mui/material"
+import FormControl from '@mui/material/FormControl';
 
-export const ComboBoxComponents = ({options, label} : {
-    options : any
+export const ComboBoxComponents = ({label, className} : {
     label: string
+    className: string
 }) => {
     return(
-        <div>
-            <Autocomplete disablePortal options={options} renderInput=
-            {
-                (params) => {
-                    return <TextField {...params} label={label}></TextField>
-                }
-            } 
-     ></Autocomplete>
-        </div>
+        <FormControl className = {className}>
+            <InputLabel id="demo-simple-select-label">{label}</InputLabel>
+            <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            label="Gender"
+            >
+                <MenuItem value={"Male"}>Male</MenuItem>
+                <MenuItem value={"Female"}>Female</MenuItem>
+            </Select>
+        </FormControl>
     )
 }

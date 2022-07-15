@@ -1,5 +1,4 @@
 import { Box, Checkbox } from "@mui/material"
-import { FormControl, FormLabel } from "react-bootstrap"
 import { ButtonComponent } from "../Components/ButtonComponent"
 import { ComboBoxComponents } from "../Components/ComboBoxComponents"
 import { FormControlComponent } from "../Components/FormControlComponent"
@@ -9,26 +8,23 @@ export const RegisterPage = () => {
     return(
         <div>
             <NavbarComponent></NavbarComponent>
-            <Box component="form">
+            <Box component="form" className = "box-register">
                 <h3>Create your account</h3>
                 <p>It's free and easy</p>
                 <div className = "register-box">
-                    <FormControlComponent className="form-control" label="First Name*" placeHolder="Enter your first name"></FormControlComponent>
-                    <FormControlComponent className="form-control" label="Last Name*" placeHolder="Enter your last name"></FormControlComponent>
+                    <FormControlComponent type = "text" className="form-control" label="First Name*" placeHolder="Enter your first name"></FormControlComponent>
+                    <FormControlComponent type = "text" className="form-control" label="Last Name*" placeHolder="Enter your last name"></FormControlComponent>
                 </div>
                 <div className = "register-box">
-                    <FormControlComponent className="form-control-email" label="Email*" placeHolder="Enter your email"></FormControlComponent>
+                    <FormControlComponent type = "email" className="form-control-email" label="Email*" placeHolder="Enter your email"></FormControlComponent>
                 </div>
                 <div className = "register-box">
-                    <FormControlComponent className="form-control" label="Password*" placeHolder="Enter your password"></FormControlComponent>
-                    <FormControlComponent className="form-control" label="Confirm Password*" placeHolder="Enter your password again"></FormControlComponent>
+                    <FormControlComponent type = "password" className="form-control" label="Password*" placeHolder="Enter your password"></FormControlComponent>
+                    <FormControlComponent type = "password" className="form-control" label="Confirm Password*" placeHolder="Enter your password again"></FormControlComponent>
                 </div>
                 <div className = "register-box">
-                    <ComboBoxComponents options={GenderBox} label="Gender*"></ComboBoxComponents>
-                    <FormLabel htmlFor="form-control-date-register">Birth Date*</FormLabel>
-                    <div>
-                        <FormControl className="form-control-date" type="date" id = "form-control-date-register"></FormControl>
-                    </div>
+                    <ComboBoxComponents label="Gender*" className = "form-gender"></ComboBoxComponents>
+                    <FormControlComponent type = "date" className="form-control" placeHolder="DD/MM/YYYY" label=""></FormControlComponent>
                 </div>
                 <div className = "register-box">
                     <Checkbox className = "check-box"></Checkbox>
@@ -40,8 +36,3 @@ export const RegisterPage = () => {
          </div>
     )
 }
-
-export const GenderBox = [
-    {label : "Male"},
-    {label : "Female"}
-]
