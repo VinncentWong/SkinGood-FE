@@ -37,6 +37,7 @@ p, h1, h2, h3{
 
 #navbar-1{
   position: absolute;
+  width: 100%;
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -48,7 +49,7 @@ p, h1, h2, h3{
   position: absolute;
   top: 13%;
   left: 28%;
-  gap: 10px;
+  gap: 12px;
 }
 
 .form-gender{
@@ -57,4 +58,41 @@ p, h1, h2, h3{
 
 .line-breaker{
   width: 100%;
+}
+
+.form-date{
+  position: absolute;
+  right: 13%;
+  height: 150%;
+  width: 139%
+}
+
+#date-label{
+  position: absolute;
+  left: 35%;
+}
+
+#bell-icon-a{
+  position: absolute;
+  left: 68em;
+}
+
+#person-icon-a{
+  position: absolute;
+  left: 71em;
+}
+
+#cart-icon-a{
+  position: absolute;
+  left: 74em;
+}
+
+#input-search{
+  left: 15em;
+  width: 25em;
+}
+
+#input-search-icon{
+  position: absolute;
+  left: 40%;
 }

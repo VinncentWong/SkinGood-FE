@@ -1,4 +1,4 @@
-import { Box, Checkbox } from "@mui/material"
+import { Box, Checkbox, FormLabel } from "@mui/material"
 import { ButtonComponent } from "../Components/ButtonComponent"
 import { ComboBoxComponents } from "../Components/ComboBoxComponents"
 import { FormControlComponent } from "../Components/FormControlComponent"
@@ -12,19 +12,21 @@ export const RegisterPage = () => {
                 <h3>Create your account</h3>
                 <p>It's free and easy</p>
                 <div className = "register-box">
-                    <FormControlComponent type = "text" className="form-control" label="First Name*" placeHolder="Enter your first name"></FormControlComponent>
-                    <FormControlComponent type = "text" className="form-control" label="Last Name*" placeHolder="Enter your last name"></FormControlComponent>
+                    <FormControlComponent variant = "filled" id = "input-firstname" type = "text" className="form-control" label="First Name*" placeHolder="Enter your first name"></FormControlComponent>
+                    <FormControlComponent variant = "filled" id = "input-lastname"type = "text" className="form-control" label="Last Name*" placeHolder="Enter your last name"></FormControlComponent>
                 </div>
                 <div className = "register-box">
-                    <FormControlComponent type = "email" className="form-control-email" label="Email*" placeHolder="Enter your email"></FormControlComponent>
+                    <FormControlComponent variant = "filled" id = "input-email" type = "email" className="form-control-email" label="Email*" placeHolder="Enter your email"></FormControlComponent>
                 </div>
                 <div className = "register-box">
-                    <FormControlComponent type = "password" className="form-control" label="Password*" placeHolder="Enter your password"></FormControlComponent>
-                    <FormControlComponent type = "password" className="form-control" label="Confirm Password*" placeHolder="Enter your password again"></FormControlComponent>
+                    <FormControlComponent variant = "filled" id = "input-password" type = "password" className="form-control" label="Password*" placeHolder="Enter your password"></FormControlComponent>
+                    <FormControlComponent variant = "filled" id = "input-confirm-password" type = "password" className="form-control" label="Confirm Password*" placeHolder="Enter your password again"></FormControlComponent>
                 </div>
                 <div className = "register-box">
                     <ComboBoxComponents label="Gender*" className = "form-gender"></ComboBoxComponents>
-                    <FormControlComponent type = "date" className="form-control" placeHolder="DD/MM/YYYY" label=""></FormControlComponent>
+                    <FormLabel htmlFor="date-input" id = "date-label">Birth date*</FormLabel>
+                    <div></div>
+                    <FormControlComponent variant = "filled" id = "date-input" type = "date" className="form-date" placeHolder="DD/MM/YYYY" label=""></FormControlComponent>
                 </div>
                 <div className = "register-box">
                     <Checkbox className = "check-box"></Checkbox>

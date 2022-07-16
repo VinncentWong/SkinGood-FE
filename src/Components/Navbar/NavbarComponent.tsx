@@ -1,4 +1,4 @@
-import { Form, InputGroup } from "react-bootstrap";
+import { InputAdornment, TextField } from "@mui/material";
 
 const Logo = require("../../Assets/Logo-SkinGood.png");
 const IconSearch = require("../../Assets/IconSearch.png");
@@ -10,23 +10,27 @@ export const NavbarComponent = (): JSX.Element => {
     return (
         <div id = "navbar-1">
             <img src={Logo} alt="logo"></img>
-            <InputGroup className="mb-3">
-                <Form.Control
-                placeholder="Recipient's username"
-                aria-label="Recipient's username"
-                aria-describedby="basic-addon2"
-                />
-                <InputGroup.Text id="basic-addon2">
-                    <img src={IconSearch} alt="icon" className="icon-search"></img>
-                </InputGroup.Text>
-            </InputGroup>
-            <a href="https://www.google.com">
+            <div id = "input-search-icon">
+                <TextField 
+                variant={"standard"} 
+                placeholder = "Discover the Solution with SkinGood"
+                InputProps={{
+                    endAdornment : 
+                    <InputAdornment position="end">
+                        <img src={IconSearch} alt="icon" className = "icon-search"></img>
+                    </InputAdornment>
+                }}
+                id="input-search"
+                >
+                </TextField>
+            </div>
+            <a href="https://www.google.com" id = "bell-icon-a">
                 <img src = {BellIcon} alt="icon"></img>
             </a>
-            <a href="https://www.google.com">
+            <a href="https://www.google.com" id = "person-icon-a">
                 <img src = {PersonIcon} alt="icon"></img>
             </a>
-            <a href="https://www.google.com">
+            <a href="https://www.google.com" id = "cart-icon-a">
                 <img src = {ShoppingCartIcon} alt="icon"></img>
             </a>
         </div>
