@@ -3,9 +3,12 @@ img{
 }
 
 p, h1, h2, h3{
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
 }
 
+.a{
+  color: black;
+}
 #landing-page{
   position: absolute;
   width: 100%;
@@ -20,8 +23,10 @@ p, h1, h2, h3{
 #register-page{
   position: absolute;
   width: 100%;
-  height: 100%;
-  background-color: green;
+  height: 150%;
+  background-color: #FFF2E2;
+  /* background-color: green; */
+  top: 10em;
 }
 
 .check-box{
@@ -34,18 +39,12 @@ p, h1, h2, h3{
   gap: 20px;
   align-items: stretch;
 }
-
-.form-control-email{
-  width: 209%;
-}
-
 .icon-search{
   height: 12px;
 }
 
 #navbar-1{
-  background-color: white;
-  width: 100%;
+  background-color: white !important;
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -74,7 +73,9 @@ p, h1, h2, h3{
   display: flex;
   flex-direction: column;
   position: absolute;
-  width: 30em;
+  background-color: white !important;
+  width: 50em;
+  height: 35em;
   top: 12em;
   left: 28em;
   gap: 1em;
@@ -146,9 +147,62 @@ p, h1, h2, h3{
   left: 2em;
   top: 2em;
 }
-/* 
-.content-register-box{
+
+#create-account-text{
   position: absolute;
-  background-size: contain;
-  background: green;
-} */
+  left: 2em;
+  top: 1em;
+}
+
+#free-easy-text{
+  position: absolute;
+  left: 2.5em;
+  top: 3em;
+}
+
+#input-1{
+  position: absolute;
+  left: 2.5em;
+  top: 8em;
+}
+#input-2{
+  position: absolute;
+  top: 13em;
+  left: 2.5em;
+}
+
+#input-3{
+  position: absolute;
+  top: 18em;
+  left: 2.5em;
+}
+
+#input-4{
+  position: absolute;
+  width: 50em;
+  top: 23em;
+  left: 2.5em;
+}
+
+#input-5{
+  position: absolute;
+  top: 27em;
+  left: 2em;
+}
+#input-6{
+  position: absolute;
+  top: 30em;
+  left: 3em;
+}
+
+#input-password{
+  width: 14em;
+}
+
+#input-email{
+  width: 29em;
+}
+
+#input-firstname{
+  width: 14em;
+}
