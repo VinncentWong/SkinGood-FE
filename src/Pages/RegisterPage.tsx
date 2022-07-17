@@ -12,7 +12,7 @@ export const RegisterPage = () => {
         <>
             <NavbarComponent></NavbarComponent>
             <NavbarTwo></NavbarTwo>
-            <div id = "register-page">
+            <div id = "page">
                 <div className="content-register-box">
                     <Box component="form" className = "box-register">
                             <h3 id = "create-account-text">Create your account</h3>

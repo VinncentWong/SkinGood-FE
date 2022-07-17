@@ -9,7 +9,7 @@ img{
   max-width: 100%;
 }
 
-p, h1, h2, h3, a{
+p, h1, h2, h3, a, label{
   font-family: 'Inter', sans-serif;
 }
 
@@ -32,7 +32,7 @@ a{
   background-size: cover;
 }
 
-#register-page{
+#page{
   position: absolute;
   width: 90em;
   height: 50em;
@@ -408,4 +408,78 @@ a{
   position: absolute;
   left: 74em;
   top: 9em;
+}
+
+.box-login{
+  background-color: white;
+  position: absolute;
+  width: 50em;
+  height: 40em;
+  top: 5em;
+  left: 20em;
+}
+
+.form-email{
+  position: absolute;
+  width: 30em;
+  background: #E8E8E8;
+  border-radius: 8px;
+  height: max-content;
+}
+
+.form-password{
+  position: absolute;
+  background: #E8E8E8;
+  width: 30em;
+}
+
+#content-login{
+  position: absolute;
+  left: 10em;
+  top: 3em;
+}
+
+.form-login{
+  position: absolute;
+  top: 12em;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.forget-password-a{
+  position: absolute;
+  top: 24em;
+  left: 20em;
+  width: 15em;
+}
+
+.forget-password-text{
+  color: #215C94;
+}
+
+#login-w-google{
+  position: absolute;
+  background: #FFFFFF;
+  border: 1px solid #75CFB8;
+  border-radius: 8px;
+  width: 15em;
+}
+
+#login-manual{
+  position: absolute;
+  width: max-content;
+  background: #75CFB8;
+  border-radius: 12px;
+  left: 20em;
+  width: 15em;
+}
+
+.button-login{
+  position: absolute;
+  display: flex;
+  top: 27em;
+  width: 25em;
+  height: 5em;
+  gap: 3em;
 }
