@@ -38,7 +38,7 @@ export const RegisterPage = () => {
                             </div>
                             <div className = "register-box" id = "input-6">
                                 <p>Already have account? <a href = "https://www.google.com">Sign In</a></p>
-                                <ButtonComponent variant="contained">Create Account</ButtonComponent>
+                                <ButtonComponent variant="contained" className = "" id = "">Create Account</ButtonComponent>
                             </div>
                     </Box>             
                 </div>
