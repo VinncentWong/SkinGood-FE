@@ -280,7 +280,7 @@ a{
   flex-direction: column;
   top: 68em;
   left: 0.1mm;
-  height: 30em;
+  height: 33em;
   width: 90em;
   background: #C9E5D3;
 }
@@ -296,4 +296,116 @@ a{
   position: absolute;
   left: 4.3em;
   top: 3.5em;
+}
+
+.payment-logo{
+  height: min-content;
+  width: min-content;
+}
+
+.payment-images{
+  position: absolute;
+  width: max-content;
+  height: 10em;
+  top: 2em;
+  left: 30em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.logo-1, .logo-2, .logo-3, .logo-4{
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  width: 15em;
+  height: 15em;
+  display: flex;
+  flex-direction: row;
+}
+
+.logo-1{
+  left: -0.9em;
+  top: 1.5em;
+  gap: 5em;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-2{
+  top: 5em;
+  left: -0.5em;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-3{
+  justify-content: center;
+  align-items: center;
+  left: -0.5em;
+  top: 13em;
+  gap: 2em;
+}
+
+.logo-4{
+  left: 1em;
+  top: 16em;
+}
+
+.payment-text{
+  position: absolute;
+  top: 3.5em;
+  left: 26.5em;
+}
+
+.shipment-images{
+  position: absolute;
+  left: 51em;
+  top: 6em;
+  display: flex;
+  flex-direction: column;
+}
+
+.shipment-text{
+  position: absolute;
+  left: 45em;
+  top: 3.2em;
+}
+
+.shipment-1, .shipment-2, .shipment-3{
+  position: absolute;
+  width: max-content;
+  height: min-content;
+  display: flex;
+}
+
+.shipment-1{
+  top: 1.5em;
+  justify-content: center;
+  align-items: center;
+}
+
+.shipment-2{
+  top: 7em;
+  justify-content: center;
+  align-items: center;
+}
+
+.shipment-3{
+  top: 9em;
+  justify-content: center;
+  align-items: center;
+}
+
+.customer-care-text{
+  position: absolute;
+  left: 63em;
+  top: 3.2em;
+}
+
+.detail-customer-care-info{
+  position: absolute;
+  left: 74em;
+  top: 9em;
 }
