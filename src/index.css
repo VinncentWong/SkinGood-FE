@@ -5,6 +5,7 @@ img{
 p, h1, h2, h3{
   font-family: 'Inter';
 }
+
 #landing-page{
   position: absolute;
   width: 100%;
@@ -14,6 +15,13 @@ p, h1, h2, h3{
   box-sizing: border-box;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#register-page{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: green;
 }
 
 .check-box{
@@ -36,20 +44,40 @@ p, h1, h2, h3{
 }
 
 #navbar-1{
-  position: absolute;
+  background-color: white;
   width: 100%;
+  position: absolute;
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  width: 100%;
+  height: 100%;
+  top: 1em;
+  left: 1em;
+}
+
+#navbar-2{
+  position: absolute;
+  left: 3.5em;
+  top: 7em;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+#drop-my-empty-a{
+  position: absolute;
+  width: 10em;
+  left: 70em;
 }
 
 .box-register{
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 13%;
-  left: 28%;
-  gap: 12px;
+  width: 30em;
+  top: 12em;
+  left: 28em;
+  gap: 1em;
 }
 
 .form-gender{
@@ -74,16 +102,23 @@ p, h1, h2, h3{
 
 #bell-icon-a{
   position: absolute;
-  left: 68em;
+  top: 2em;
+  left: 66em;
+  width: 100%;
+  height: 100vh;
 }
 
 #person-icon-a{
   position: absolute;
-  left: 71em;
+  width: 100%;
+  top: 2em;
+  left: 70em;
 }
 
 #cart-icon-a{
   position: absolute;
+  width: 100%;
+  top: 2em;
   left: 74em;
 }
 
@@ -94,5 +129,26 @@ p, h1, h2, h3{
 
 #input-search-icon{
   position: absolute;
+  width: 100%;
+  top: 2em;
   left: 40%;
 }
+
+#navbar-two{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+#logo-skingood{
+  position: absolute;
+  left: 2em;
+  top: 2em;
+}
+/* 
+.content-register-box{
+  position: absolute;
+  background-size: contain;
+  background: green;
+} */

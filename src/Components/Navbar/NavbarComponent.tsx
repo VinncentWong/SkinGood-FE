@@ -9,7 +9,7 @@ const BellIcon = require("../../Assets/Bell-Icon.png");
 export const NavbarComponent = (): JSX.Element => {
     return (
         <div id = "navbar-1">
-            <img src={Logo} alt="logo"></img>
+            <img src={Logo} alt="logo" id = "logo-skingood"></img>
             <div id = "input-search-icon">
                 <TextField 
                 variant={"standard"} 
