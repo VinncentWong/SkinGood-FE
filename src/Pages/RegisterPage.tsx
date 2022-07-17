@@ -1,9 +1,11 @@
 import { Box, Checkbox, FormLabel } from "@mui/material"
-import { ButtonComponent } from "../Components/ButtonComponent"
-import { ComboBoxComponents } from "../Components/ComboBoxComponents"
-import { FormControlComponent } from "../Components/FormControlComponent"
+import { ButtonComponent } from "../Components/Button/ButtonComponent"
+import { ComboBoxComponents } from "../Components/Form/ComboBoxComponents"
+import { FormControlComponent } from "../Components/Form/FormControlComponent"
 import { NavbarComponent } from "../Components/Navbar/NavbarComponent"
 import { NavbarTwo } from "../Components/Navbar/NavbarTwo"
+import { SubscribeNewsLetter } from "../Components/Footer/SubscribeNewsletter"
+import { InformationComponent } from "../Components/Footer/Information"
 
 export const RegisterPage = () => {
     return(
@@ -38,11 +40,13 @@ export const RegisterPage = () => {
                             </div>
                             <div className = "register-box" id = "input-6">
                                 <p>Already have account? <a href = "https://www.google.com">Sign In</a></p>
-                                <ButtonComponent variant="contained" className = "" id = "">Create Account</ButtonComponent>
+                                <ButtonComponent variant="contained" className = "button-create-account" id = "button-create-account">Create Account</ButtonComponent>
                             </div>
                     </Box>             
                 </div>
             </div>
+            <SubscribeNewsLetter></SubscribeNewsLetter>
+            <InformationComponent></InformationComponent>
          </>
     )
 }
