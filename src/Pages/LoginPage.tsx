@@ -1,4 +1,4 @@
-import { ChangeEvent, ReactEventHandler, useState } from "react"
+import { ChangeEvent, FormEvent, ReactEventHandler, useState } from "react"
 import { ButtonComponent } from "../Components/Button/ButtonComponent"
 import { InformationComponent } from "../Components/Footer/Information"
 import { SubscribeNewsLetter } from "../Components/Footer/SubscribeNewsletter"
@@ -18,6 +18,15 @@ export const LoginPage = () => {
     const passwordHandler: ReactEventHandler = (event: ChangeEvent<HTMLInputElement>) => {
         setPassword(event.target.value);
     }
+
+    const loginGoogleHandler: ReactEventHandler = (event: FormEvent) => {
+
+    }
+
+    const loginManualHandler: ReactEventHandler = (event: FormEvent) => {
+
+    }
+
 
     return(
         <div>
@@ -55,10 +64,20 @@ export const LoginPage = () => {
                         </div>
                         <a href="https://www.google.com" className="forget-password-a"><span className="forget-password-text">Forget your password?</span></a>
                         <div className="button-login">
-                            <ButtonComponent className="login-w-google" id="login-w-google" variant="">
+                            <ButtonComponent 
+                            className="login-w-google" 
+                            id="login-w-google" 
+                            variant=""
+                            onChange={loginGoogleHandler}
+                            >
                                 <LoginWithGoogleText></LoginWithGoogleText>
                             </ButtonComponent>
-                            <ButtonComponent className="login-manual" id="login-manual" variant=""><p>Sign In</p></ButtonComponent>
+                            <ButtonComponent 
+                            className="login-manual"
+                             id="login-manual" 
+                             variant=""
+                             onChange={loginManualHandler}
+                             ><p>Sign In</p></ButtonComponent>
                         </div>
                     </div>
                 </div>

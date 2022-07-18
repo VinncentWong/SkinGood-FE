@@ -1,5 +1,5 @@
 
-import { ReactEventHandler } from "react";
+import { ChangeEvent, ReactEventHandler, useState } from "react";
 import { ButtonComponent } from "../Button/ButtonComponent"
 import { FormControlComponent } from "../Form/FormControlComponent"
 
@@ -9,6 +9,10 @@ export const SubscribeNewsLetter = (): JSX.Element => {
 
     const subscribeHandler: ReactEventHandler = (event: ChangeEvent<HTMLInputElement>) => {
         setSubcribe(event.target.value);
+    }
+
+    const subscribeButtonHandler: ReactEventHandler = (event: React.FormEvent) => {
+        
     }
 
     return(
@@ -23,7 +27,12 @@ export const SubscribeNewsLetter = (): JSX.Element => {
             label=""
             onChange={subscribeHandler}
             ></FormControlComponent>
-            <ButtonComponent variant="contained" id = "button-subscribe" className = "button-subscribe">Subscribe</ButtonComponent>
+            <ButtonComponent 
+            variant="contained" 
+            id = "button-subscribe" 
+            className = "button-subscribe"
+            onChange = {subscribeButtonHandler}
+            >Subscribe</ButtonComponent>
         </div>
     )
 }

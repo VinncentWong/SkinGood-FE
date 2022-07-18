@@ -38,12 +38,16 @@ export const RegisterPage = () => {
     }
 
     const genderHandler = (event: SelectChangeEvent) => {
-        setGender(event.target.name);
+        setGender(event.target.value);
         console.log("gender = " + event.target.value);
     }
 
     const dateHandler: ReactEventHandler = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setDate(event.target.value);
+    }
+
+    const submitHandler: ReactEventHandler = (event: React.FormEvent) => {
+
     }
     return(
         <>
@@ -129,7 +133,12 @@ export const RegisterPage = () => {
                             </div>
                             <div className = "register-box" id = "input-6">
                                 <p>Already have account? <a href = "https://www.google.com">Sign In</a></p>
-                                <ButtonComponent variant="contained" className = "button-create-account" id = "button-create-account">Create Account</ButtonComponent>
+                                <ButtonComponent 
+                                variant="contained" 
+                                className = "button-create-account" 
+                                id = "button-create-account"
+                                onChange={submitHandler}
+                                >Create Account</ButtonComponent>
                             </div>
                     </Box>             
                 </div>
