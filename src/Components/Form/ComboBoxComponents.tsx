@@ -1,9 +1,11 @@
-import { InputLabel, MenuItem, Select } from "@mui/material"
+import { InputLabel, MenuItem, Select, SelectChangeEvent } from "@mui/material"
 import FormControl from '@mui/material/FormControl';
+import React, { ReactEventHandler } from "react";
 
-export const ComboBoxComponents = ({label, className} : {
-    label: string
-    className: string
+export const ComboBoxComponents = ({label, className, onChange} : {
+    label: string,
+    className: string,
+    onChange: ReactEventHandler
 }) => {
     return(
         <FormControl className = {className}>
@@ -12,6 +14,11 @@ export const ComboBoxComponents = ({label, className} : {
             labelId="demo-simple-select-label"
             id="demo-simple-select"
             label="Gender"
+            onChange={
+                (event: SelectChangeEvent, child: React.ReactNode) => {
+                    onChange(event as any);
+                }
+            }
             >
                 <MenuItem value={"Male"}>Male</MenuItem>
                 <MenuItem value={"Female"}>Female</MenuItem>

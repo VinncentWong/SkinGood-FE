@@ -1,4 +1,4 @@
-import { Box, Checkbox, FormLabel } from "@mui/material"
+import { Box, Checkbox, FormLabel, SelectChangeEvent } from "@mui/material"
 import { ButtonComponent } from "../Components/Button/ButtonComponent"
 import { ComboBoxComponents } from "../Components/Form/ComboBoxComponents"
 import { FormControlComponent } from "../Components/Form/FormControlComponent"
@@ -6,8 +6,45 @@ import { NavbarComponent } from "../Components/Navbar/NavbarComponent"
 import { NavbarTwo } from "../Components/Navbar/NavbarTwo"
 import { SubscribeNewsLetter } from "../Components/Footer/SubscribeNewsletter"
 import { InformationComponent } from "../Components/Footer/Information"
+import { ChangeEvent, ReactEventHandler, useState } from "react"
 
 export const RegisterPage = () => {
+    const [email, setEmail] = useState<string>("");
+    const [firstName, setFirstName] = useState<string>("");
+    const [lastName, setLastName] = useState<string>("");
+    const [password, setPassword] = useState<string>("");
+    const [confirmPassword, setConfirmPassword] = useState<string>("");
+    const [gender, setGender] = useState<string>("");
+    const [date, setDate] = useState<string>("");
+
+    const emailHandler: ReactEventHandler = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setEmail(event.target.value)
+    }
+
+    const firstNameHandler: ReactEventHandler = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setFirstName(event.target.value)
+    }
+
+    const lastNameHandler: ReactEventHandler = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setLastName(event.target.value)
+    }
+
+    const passwordHandler: ReactEventHandler = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setPassword(event.target.value)
+    }
+
+    const confirmPasswordHandler: ReactEventHandler = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setConfirmPassword(event.target.value)
+    }
+
+    const genderHandler = (event: SelectChangeEvent) => {
+        setGender(event.target.name)
+        console.log("gender = " + event.target.value)
+    }
+
+    const dateHandler: ReactEventHandler = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setDate(event.target.value)
+    }
     return(
         <>
             <NavbarComponent></NavbarComponent>
@@ -18,21 +55,73 @@ export const RegisterPage = () => {
                             <h3 id = "create-account-text">Create your account</h3>
                             <p id = "free-easy-text">It's free and easy</p>
                             <div className = "register-box" id = "input-1">
-                                <FormControlComponent variant = "filled" id = "input-firstname" type = "text" className="form-control" label="First Name*" placeHolder="Enter your first name"></FormControlComponent>
-                                <FormControlComponent variant = "filled" id = "input-lastname"type = "text" className="form-control" label="Last Name*" placeHolder="Enter your last name"></FormControlComponent>
+                                <FormControlComponent 
+                                variant = "filled" 
+                                id = "input-firstname" 
+                                type = "text" 
+                                className="form-control" 
+                                label="First Name*" 
+                                placeHolder="Enter your first name"
+                                onChange={firstNameHandler}
+                                ></FormControlComponent>
+                                <FormControlComponent 
+                                variant = "filled" 
+                                id = "input-lastname"
+                                type = "text" 
+                                className="form-control" 
+                                label="Last Name*" 
+                                placeHolder="Enter your last name"
+                                onChange={lastNameHandler}
+                                ></FormControlComponent>
                             </div>
                             <div className = "register-box" id = "input-2">
-                                <FormControlComponent variant = "filled" id = "input-email" type = "email" className="form-control-email" label="Email*" placeHolder="Enter your email"></FormControlComponent>
+                                <FormControlComponent 
+                                variant = "filled" 
+                                id = "input-email" 
+                                type = "email" 
+                                className="form-control-email" 
+                                label="Email*" 
+                                placeHolder="Enter your email"
+                                onChange={emailHandler}
+                                ></FormControlComponent>
                             </div>
                             <div className = "register-box" id = "input-3">
-                                <FormControlComponent variant = "filled" id = "input-password" type = "password" className="form-control" label="Password*" placeHolder="Enter your password"></FormControlComponent>
-                                <FormControlComponent variant = "filled" id = "input-confirm-password" type = "password" className="form-control" label="Confirm Password*" placeHolder="Enter your password again"></FormControlComponent>
+                                <FormControlComponent 
+                                variant = "filled" 
+                                id = "input-password" 
+                                type = "password" 
+                                className="form-control" 
+                                label="Password*" 
+                                placeHolder="Enter your password"
+                                onChange={passwordHandler}
+                                ></FormControlComponent>
+                                <FormControlComponent 
+                                variant = "filled" 
+                                id = "input-confirm-password" 
+                                type = "password" 
+                                className="form-control" 
+                                label="Confirm Password*" 
+                                placeHolder="Enter your password again"
+                                onChange={confirmPasswordHandler}
+                                ></FormControlComponent>
                             </div>
                             <div className = "register-box" id = "input-4">
-                                <ComboBoxComponents label="Gender*" className = "form-gender"></ComboBoxComponents>
+                                <ComboBoxComponents 
+                                label="Gender*" 
+                                className = "form-gender"
+                                onChange={genderHandler as ReactEventHandler}
+                                ></ComboBoxComponents>
                                 <FormLabel htmlFor="date-input" id = "date-label">Birth date*</FormLabel>
                                 <div></div>
-                                <FormControlComponent variant = "filled" id = "date-input" type = "date" className="form-date" placeHolder="DD/MM/YYYY" label=""></FormControlComponent>
+                                <FormControlComponent 
+                                variant = "filled" 
+                                id = "date-input" 
+                                type = "date" 
+                                className="form-date" 
+                                placeHolder="DD/MM/YYYY" 
+                                label=""
+                                onChange={dateHandler}
+                                ></FormControlComponent>
                             </div>
                             <div className = "register-box" id = "input-5">
                                 <Checkbox className = "check-box"></Checkbox>
