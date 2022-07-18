@@ -12,7 +12,7 @@ export const SubscribeNewsLetter = (): JSX.Element => {
     }
 
     const subscribeButtonHandler: ReactEventHandler = (event: React.FormEvent) => {
-        
+
     }
 
     return(
@@ -31,7 +31,7 @@ export const SubscribeNewsLetter = (): JSX.Element => {
             variant="contained" 
             id = "button-subscribe" 
             className = "button-subscribe"
-            onChange = {subscribeButtonHandler}
+            handler = {subscribeButtonHandler}
             >Subscribe</ButtonComponent>
         </div>
     )

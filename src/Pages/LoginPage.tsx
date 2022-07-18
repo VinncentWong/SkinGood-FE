@@ -68,7 +68,7 @@ export const LoginPage = () => {
                             className="login-w-google" 
                             id="login-w-google" 
                             variant=""
-                            onChange={loginGoogleHandler}
+                            handler={loginGoogleHandler}
                             >
                                 <LoginWithGoogleText></LoginWithGoogleText>
                             </ButtonComponent>
@@ -76,7 +76,7 @@ export const LoginPage = () => {
                             className="login-manual"
                              id="login-manual" 
                              variant=""
-                             onChange={loginManualHandler}
+                             handler={loginManualHandler}
                              ><p>Sign In</p></ButtonComponent>
                         </div>
                     </div>

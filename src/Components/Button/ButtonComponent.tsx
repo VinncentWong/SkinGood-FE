@@ -1,21 +1,21 @@
 import { Button } from "@mui/material"
-import React, { ChangeEvent, FormEventHandler } from "react"
+import React from "react"
 
-export const ButtonComponent = ({variant, children, id, className, onChange} : {
+export const ButtonComponent = ({variant, children, id, className, handler} : {
     variant : string | undefined,
     children : React.ReactNode,
     id: string,
     className: string,
-    onChange: React.ReactEventHandler
+    handler: React.ReactEventHandler
 }): JSX.Element => {
     return (
         <Button 
         variant = {variant || undefined as any} 
         id = {id} 
         className = {className}
-        onChange={
+        onClick = {
             (event: React.FormEvent) => {
-                onChange(event);
+                handler(event);
             }
         }
         >{children}</Button>

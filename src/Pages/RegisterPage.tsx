@@ -6,7 +6,10 @@ import { NavbarComponent } from "../Components/Navbar/NavbarComponent"
 import { NavbarTwo } from "../Components/Navbar/NavbarTwo"
 import { SubscribeNewsLetter } from "../Components/Footer/SubscribeNewsletter"
 import { InformationComponent } from "../Components/Footer/Information"
-import { ChangeEvent, ReactEventHandler, useState } from "react"
+import { ChangeEvent, ReactEventHandler, useEffect, useState } from "react"
+import axios from "../Api/Api"
+import { toast, ToastContainer } from "react-toastify"
+import { AxiosPromise } from "axios"
 
 export const RegisterPage = () => {
     const [email, setEmail] = useState<string>("");
@@ -16,6 +19,7 @@ export const RegisterPage = () => {
     const [confirmPassword, setConfirmPassword] = useState<string>("");
     const [gender, setGender] = useState<string>("");
     const [date, setDate] = useState<string>("");
+    const [validate, setValidate] = useState<boolean>(false);
 
     const emailHandler: ReactEventHandler = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setEmail(event.target.value);
@@ -47,14 +51,29 @@ export const RegisterPage = () => {
     }
 
     const submitHandler: ReactEventHandler = (event: React.FormEvent) => {
-
+        console.log("Masuk ke submit handler");
+        if(password !== confirmPassword){
+            alert("Password and confirm password doesn't match!");
+            return;
+        }
+        const result: AxiosPromise = axios.post("/user/registration", {
+                "email" : email,
+                "firstname" : firstName,
+                "lastname" : lastName,
+                "password" : password,
+                "gender" : gender,
+                "birth" : date,
+        });  
+        
     }
+
     return(
         <>
             <NavbarComponent></NavbarComponent>
             <NavbarTwo></NavbarTwo>
             <div id = "page">
                 <div className="content-register-box">
+                    <ToastContainer/>
                     <Box component="form" className = "box-register">
                             <h3 id = "create-account-text">Create your account</h3>
                             <p id = "free-easy-text">It's free and easy</p>
@@ -137,7 +156,7 @@ export const RegisterPage = () => {
                                 variant="contained" 
                                 className = "button-create-account" 
                                 id = "button-create-account"
-                                onChange={submitHandler}
+                                handler={submitHandler}
                                 >Create Account</ButtonComponent>
                             </div>
                     </Box>             
