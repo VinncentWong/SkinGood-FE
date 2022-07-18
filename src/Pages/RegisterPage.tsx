@@ -18,32 +18,32 @@ export const RegisterPage = () => {
     const [date, setDate] = useState<string>("");
 
     const emailHandler: ReactEventHandler = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setEmail(event.target.value)
+        setEmail(event.target.value);
     }
 
     const firstNameHandler: ReactEventHandler = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setFirstName(event.target.value)
+        setFirstName(event.target.value);
     }
 
     const lastNameHandler: ReactEventHandler = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setLastName(event.target.value)
+        setLastName(event.target.value);
     }
 
     const passwordHandler: ReactEventHandler = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setPassword(event.target.value)
+        setPassword(event.target.value);
     }
 
     const confirmPasswordHandler: ReactEventHandler = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setConfirmPassword(event.target.value)
+        setConfirmPassword(event.target.value);
     }
 
     const genderHandler = (event: SelectChangeEvent) => {
-        setGender(event.target.name)
-        console.log("gender = " + event.target.value)
+        setGender(event.target.name);
+        console.log("gender = " + event.target.value);
     }
 
     const dateHandler: ReactEventHandler = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setDate(event.target.value)
+        setDate(event.target.value);
     }
     return(
         <>

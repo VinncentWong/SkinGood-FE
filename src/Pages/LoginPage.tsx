@@ -1,3 +1,4 @@
+import { ChangeEvent, ReactEventHandler, useState } from "react"
 import { ButtonComponent } from "../Components/Button/ButtonComponent"
 import { InformationComponent } from "../Components/Footer/Information"
 import { SubscribeNewsLetter } from "../Components/Footer/SubscribeNewsletter"
@@ -6,6 +7,18 @@ import { NavbarComponent } from "../Components/Navbar/NavbarComponent"
 import { NavbarTwo } from "../Components/Navbar/NavbarTwo"
 
 export const LoginPage = () => {
+
+    const [email, setEmail] = useState<string>("");
+    const [password, setPassword] = useState<string>("");
+
+    const emailHandler: ReactEventHandler = (event: ChangeEvent<HTMLInputElement>) => {
+        setEmail(event.target.value);
+    } 
+
+    const passwordHandler: ReactEventHandler = (event: ChangeEvent<HTMLInputElement>) => {
+        setPassword(event.target.value);
+    }
+
     return(
         <div>
             <NavbarComponent></NavbarComponent>
@@ -24,6 +37,7 @@ export const LoginPage = () => {
                                 variant="filled"
                                 id="email"
                                 placeHolder="Enter your email"
+                                onChange={emailHandler}
                                 ></FormControlComponent>
                             </div>
                                 <div>
@@ -35,6 +49,7 @@ export const LoginPage = () => {
                                 variant="filled"
                                 id="password"
                                 placeHolder="Enter your password"
+                                onChange={passwordHandler}
                                 ></FormControlComponent>
                             </div>
                         </div>
