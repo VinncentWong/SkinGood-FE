@@ -6,7 +6,7 @@ export const ButtonComponent = ({variant, children, id, className, handler} : {
     children : React.ReactNode,
     id: string,
     className: string,
-    handler: React.ReactEventHandler
+    handler: React.ReactEventHandler | undefined
 }): JSX.Element => {
     return (
         <Button 
@@ -15,7 +15,9 @@ export const ButtonComponent = ({variant, children, id, className, handler} : {
         className = {className}
         onClick = {
             (event: React.FormEvent) => {
-                handler(event);
+                if(handler !== undefined){
+                    handler(event);
+                }
             }
         }
         >{children}</Button>

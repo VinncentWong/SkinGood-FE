@@ -150,7 +150,7 @@ export const RegisterPage = () => {
                                     <p>By checking the box, I agree that I have read and accepted the <a href = "https://www.google.com">Terms of Use</a> and <a href = "https://www.google.com">Privacy and Policy.</a></p>
                                 </div>
                                 <div className = "register-box" id = "input-6">
-                                    <p>Already have account? <a href = "https://www.google.com">Sign In</a></p>
+                                    <p>Already have account? <a href = "/login">Sign In</a></p>
                                     <ButtonComponent 
                                     variant="contained" 
                                     className = "button-create-account" 
