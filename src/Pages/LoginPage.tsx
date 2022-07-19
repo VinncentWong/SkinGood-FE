@@ -1,5 +1,5 @@
 import axios from "../Api/Api"
-import { ChangeEvent, FormEvent, ReactEventHandler, useEffect, useRef, useState } from "react"
+import { ChangeEvent, FormEvent, ReactEventHandler, useEffect, useState } from "react"
 import { ButtonComponent } from "../Components/Button/ButtonComponent"
 import { InformationComponent } from "../Components/Footer/Information"
 import { SubscribeNewsLetter } from "../Components/Footer/SubscribeNewsletter"
@@ -8,20 +8,19 @@ import { NavbarComponent } from "../Components/Navbar/NavbarComponent"
 import { NavbarTwo } from "../Components/Navbar/NavbarTwo"
 import { AxiosPromise } from "axios"
 
-
 export const LoginPage = () => {
 
     const [email, setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
-    let googleUrl = useRef<string>("");
+    const [googleUrl, setGoogleUrl] = useState<string>("");
 
     useEffect( () => {
         try{
             const data: AxiosPromise = axios.get("/user/login-w-google");
             data.then(
                 (data) => {
-                    googleUrl.current = data.data.url;
-                    console.log(`google url = ${JSON.stringify(googleUrl.current)}`)
+                    setGoogleUrl(data.data.url);
+                    console.log(`google url = ${JSON.stringify(googleUrl)}`)
                 }
             )
             .catch(
@@ -34,7 +33,8 @@ export const LoginPage = () => {
         catch(err){
             alert("user tidak ter-autentikasi");
         }
-    })
+    }, [googleUrl])
+
     const emailHandler: ReactEventHandler = (event: ChangeEvent<HTMLInputElement>) => {
         setEmail(event.target.value);
     } 
@@ -93,13 +93,13 @@ export const LoginPage = () => {
                         </div>
                         <a href="https://www.google.com" className="forget-password-a"><span className="forget-password-text">Forget your password?</span></a>
                         <div className="button-login">
-                            <a href={googleUrl.current}>
+                            <a href={googleUrl}>
                                 <ButtonComponent 
                                 className="login-w-google" 
                                 id="login-w-google" 
                                 variant=""
                                 handler={(event) => {
-                                    console.log("current url = " + googleUrl.current);
+                                    console.log("current url = " + googleUrl);
                                 }}
                                 >
                                     <LoginWithGoogleText></LoginWithGoogleText>
