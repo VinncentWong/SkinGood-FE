@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { LandingPage } from './Pages/LandingPage';
 import { LoginPage } from './Pages/LoginPage';
 import { RegisterPage } from './Pages/RegisterPage';
-import { ToastContainer} from 'react-toastify';
+
 function App() {
   return (
     <div>
