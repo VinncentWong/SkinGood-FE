@@ -483,3 +483,44 @@ a{
   height: 5em;
   gap: 3em;
 }
+
+#user-dropdown{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 1em;
+  gap: 15px;
+  width: 3em;
+}
+
+#name-editlink{
+  position: absolute;
+  top: 1.2em;
+  width: 15em;
+  left: 11em;
+}
+
+#dropdown-links{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 15em;
+  top: 6.5em;
+}
+
+#dropdown-content-container{
+  position: absolute;
+  width: 10em;
+}
+
+#profile{
+  position: absolute;
+  border-radius: 50%;
+  width: 10em;
+  top: 3em;
+}
+
+#edit-profile-a{
+  color: #FEBF6F;
+  font-weight: bolder;
+}

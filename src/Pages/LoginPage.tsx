@@ -45,7 +45,7 @@ export const LoginPage = () => {
 
     const loginManualHandler: ReactEventHandler = async (event: FormEvent) => {
         try{
-            await axios.post("/user/login-w-google", {
+            await axios.post("/user/login", {
                 "email" : email,
                 "password" : password,
             });
