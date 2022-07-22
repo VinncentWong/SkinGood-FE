@@ -14,7 +14,15 @@ export const ProfileCard = (): JSX.Element => {
 
     }
 
-    const buttonEditPassword: ReactEventHandler = (event: React.FormEvent) => {
+    const buttonEditPasswordHandler: ReactEventHandler = (event: React.FormEvent) => {
+
+    }
+
+    const buttonCancelHandler: ReactEventHandler = (event: React.FormEvent) => {
+
+    }
+
+    const buttonConfirmHandler: ReactEventHandler = (event: React.FormEvent) => {
 
     }
     return(
@@ -75,12 +83,16 @@ export const ProfileCard = (): JSX.Element => {
                 <div id = "div-edit-password">
                     <label htmlFor="button-edit-password"><h3>Change password</h3></label>
                     <div id = "edit-password-container-value">
-                        <ButtonComponent className="" id="button-edit-password" variant="contained" handler={buttonEditPassword}>
+                        <ButtonComponent className="" id="button-edit-password" variant="contained" handler={buttonEditPasswordHandler}>
                             <p id = "value-password">***************</p>
                             <img src = {logo} alt = "arrow" id = "arrow-3"></img>
                         </ButtonComponent>
                     </div>
                 </div>
+            </div>
+            <div id = "buttons-profile">
+                <ButtonComponent className="" id="button-cancel-profile" handler={buttonCancelHandler} variant="contained"><p id = "cancel-text">Cancel</p></ButtonComponent>
+                <ButtonComponent className="" id="button-save-profile" handler={buttonConfirmHandler} variant="contained"><p id = "save-text">Save</p></ButtonComponent>
             </div>
         </div>
     )

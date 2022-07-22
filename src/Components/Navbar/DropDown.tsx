@@ -14,10 +14,10 @@ export const DropDown = (): JSX.Element => {
                     </div>
                 </div>
                 <div id = "dropdown-links">
-                    <a href = "https://www.google.com"><h3>My Address</h3></a>
-                    <a href = "https://www.google.com"><h3>My Orders</h3></a>
-                    <a href = "https://www.google.com"><h3>My Favorite</h3></a>
-                    <a href = "https://www.google.com"><h3>My SkinGood Points</h3></a>
+                    <a href = "https://www.google.com"><p className="a-dropdown">My Address</p></a>
+                    <a href = "https://www.google.com"><p className="a-dropdown">My Orders</p></a>
+                    <a href = "https://www.google.com"><p className="a-dropdown">My Favorite</p></a>
+                    <a href = "https://www.google.com"><p className="a-dropdown">My SkinGood Points</p></a>
                 </div>
             </div>
         </div>
