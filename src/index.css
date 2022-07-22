@@ -682,3 +682,71 @@ a{
   top: 24em;
   left: 33em;
 }
+
+#gender-container-value{
+  position: absolute;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.96)), #000000;
+  border-radius: 8px;
+  width: 17.5em;
+  height: 3em;
+}
+
+#gender-value{
+  position: absolute;
+  left: 1em;
+  width: 10em;
+  height: 10em;
+}
+
+#profile-4{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 30em;
+  top: 1em;
+}
+
+#div-birth-date{
+  position: absolute;
+  top: 31em;
+  left: 10em;
+  width: 10em;
+}
+
+#birth-date-container-value{
+  position: absolute;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.96)), #000000;
+  border-radius: 8px;
+  width: 17.5em;
+  height: 3em;
+}
+#birth-date-value{
+  position: absolute;
+  left: 1em;
+}
+
+#div-edit-password{
+  position: absolute;
+  top: 31em;
+  left: 33em;
+  width: 10em;
+}
+
+#button-edit-password{
+  position: absolute;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.96)), #000000;
+  border-radius: 8px;
+  width: 20em;
+  height: 3em;
+}
+
+#value-password{
+  position: absolute;
+  color: black;
+  left: 1em;
+}
+
+#arrow-3{
+  position: absolute;
+  left: 18.5em;
+}

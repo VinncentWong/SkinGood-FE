@@ -60,22 +60,24 @@ export const ProfileCard = (): JSX.Element => {
                 </div>
                 <div id = "div-gender">
                     <h3>Gender</h3>
-                    <div id = "gender-value">
-                        <p>Male</p>
+                    <div id = "gender-container-value">
+                        <p id = "gender-value">Male</p>
                     </div>
                 </div>
             </div>
-            <div>
-                <div>
-                    <p>Birth Date</p>
-                    <p>22/07/2022</p>
+            <div id = "profile-4">
+                <div id = "div-birth-date">
+                    <h3>Birth Date</h3>
+                    <div id = "birth-date-container-value">
+                        <p id = "birth-date-value">22/07/2022</p>
+                    </div>
                 </div>
-                <div>
-                    <p>Change Password</p>
-                    <div>
+                <div id = "div-edit-password">
+                    <label htmlFor="button-edit-password"><h3>Change password</h3></label>
+                    <div id = "edit-password-container-value">
                         <ButtonComponent className="" id="button-edit-password" variant="contained" handler={buttonEditPassword}>
-                            <p>Atur Sekarang</p>
-                            <img src = {logo} alt = "arrow"></img>
+                            <p id = "value-password">***************</p>
+                            <img src = {logo} alt = "arrow" id = "arrow-3"></img>
                         </ButtonComponent>
                     </div>
                 </div>
