@@ -1,30 +1,21 @@
-import React, { ReactEventHandler } from "react"
+import React, { FormEvent, ReactEventHandler } from "react"
 import { ButtonComponent } from "../Button/ButtonComponent"
 
 const logo = require("../../Assets/Panah.png");
 // const cameraLogo = require("../../Assets/Vector.png");
 
-export const ProfileCard = (): JSX.Element => {
+export const ProfileCard = ({buttonEditEmailHandler, buttonEditPasswordHandler, buttonEditPhoneNumber, buttonCancelHandler, buttonConfirmHandler}: {
+    buttonEditEmailHandler: ReactEventHandler,
+    buttonEditPasswordHandler: ReactEventHandler,
+    buttonEditPhoneNumber: ReactEventHandler,
+    buttonCancelHandler: ReactEventHandler,
+    buttonConfirmHandler: ReactEventHandler,
+}): JSX.Element => {
 
-    const buttonEditEmailHandler: ReactEventHandler = (event: React.FormEvent) => {
-
+    const buttonEmailHandler: ReactEventHandler = (event: FormEvent<HTMLInputElement>) => {
+        buttonEditEmailHandler(event);
     }
 
-    const buttonEditPhoneNumber: ReactEventHandler = (event: React.FormEvent) => {
-
-    }
-
-    const buttonEditPasswordHandler: ReactEventHandler = (event: React.FormEvent) => {
-
-    }
-
-    const buttonCancelHandler: ReactEventHandler = (event: React.FormEvent) => {
-
-    }
-
-    const buttonConfirmHandler: ReactEventHandler = (event: React.FormEvent) => {
-
-    }
     return(
         <div id = "profile-card">
             <img alt="profile" id = "profile-picture"></img>
@@ -46,7 +37,7 @@ export const ProfileCard = (): JSX.Element => {
             <div id = "profile-2">
                 <div id = "div-email">
                     <label id = "label-email-profile"><h3>Email</h3></label>
-                    <ButtonComponent className="" id="button-edit-email" variant="contained" handler={buttonEditEmailHandler}>
+                    <ButtonComponent className="" id="button-edit-email" variant="contained" handler={buttonEmailHandler}>
                         <p id = "email-value">bccsotosate@gmail.com</p>
                         <img src = {logo} alt = "arrow" id = "arrow-1"></img>
                     </ButtonComponent>

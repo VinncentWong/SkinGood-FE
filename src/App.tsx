@@ -7,7 +7,7 @@ import { RegisterPage } from './Pages/RegisterPage';
 
 function App() {
   return (
-    <div>
+    <div id = "root">
         <BrowserRouter>
           <Routes>
             <Route path='/' element = {<LandingPage></LandingPage>}></Route>

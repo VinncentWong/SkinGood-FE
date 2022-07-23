@@ -798,3 +798,81 @@ a{
   color: black;
   font-weight: bolder;
 }
+
+#popup-email{
+  position: absolute;
+  width: 30em;
+  top: 10em;
+  left: 40em;
+  transform: translate(-50%, -50%);
+}
+
+#old-email-container{
+  position: absolute;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.96)), #000000;
+  border-radius: 8px;
+  width: 30em;
+  height: 3em;
+}
+
+#old-email-value-popup{
+  position: absolute;
+  width: 30em;
+  left: 1em;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#popup-email-container{
+  position: absolute;
+  width: 15em;
+  top: -2em;
+}
+
+#popup-new-email-container{
+  position: absolute;
+  width: 15em;
+  top: 6em;
+}
+
+#new-email-input{
+  position: absolute;
+  top: 0.5em;
+  width: 30em;
+  height: 0.5em;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.96)), #000000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#buttons-popup-edit-password{
+  position: absolute;
+  top: 18em;
+}
+
+#cancel-button-popup-email{
+  position: absolute;
+  width: 15em;
+  height: 3em;
+  background: #FFFFFF;
+  border-radius: 8px;
+}
+
+#save-button-popup-email{
+  position: absolute;
+  width: 15em;
+  left: 20em;
+  height: 3em;
+  background: #75CFB8;
+  border-radius: 12px;
+}
+
+#cancel-popup-email{
+  color: black;
+  font-weight: bolder;
+}
+
+#save-popup-email{
+  color: black;
+  font-weight: bolder;
+}
