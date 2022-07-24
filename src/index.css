@@ -503,7 +503,7 @@ a{
   position: absolute;
   top: 1.2em;
   width: 15em;
-  left: 11em;
+  left: 7em;
 }
 
 #dropdown-links{
@@ -521,8 +521,9 @@ a{
 
 #profile{
   position: absolute;
+  left: 2em;
   border-radius: 50%;
-  width: 10em;
+  width: 3em;
   top: 3em;
 }
 
@@ -567,10 +568,11 @@ a{
 
 #profile-picture{
   position: absolute;
-  width: 20em;
+  width: 6em;
+  height: 6em;
   border-radius: 50%;
-  left: 25em;
-  top: 5em;
+  left: 20em;
+  top: 2em;
 }
 
 #div-email{
@@ -900,4 +902,33 @@ a{
   height: 2em;
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.96)), #000000;
   border-radius: 8px;
+}
+
+#address-card{
+  position: absolute;
+  left: 23em;
+  font-weight: bolder;
+}
+
+#tambah-alamat-baru{
+  position: absolute;
+  top: 1em;
+  left: 51em;
+  width: 17em;
+  height: 3em;
+  background: #75CFB8;
+  border-radius: 12px;
+}
+
+#plus-image{
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  left: 0.5em;
+  top: 0.5em;
+}
+
+#tambah-alamat-baru-text{
+  color: black;
+  font-weight: bolder;
 }

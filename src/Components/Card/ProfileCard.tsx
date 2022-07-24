@@ -1,3 +1,4 @@
+import { Avatar } from "@mui/material";
 import React, { FormEvent, ReactEventHandler } from "react"
 import { ButtonComponent } from "../Button/ButtonComponent"
 
@@ -18,7 +19,7 @@ export const ProfileCard = ({buttonEditEmailHandler, buttonEditPasswordHandler, 
 
     return(
         <div id = "profile-card">
-            <img alt="profile" id = "profile-picture"></img>
+            <Avatar id = "profile-picture"></Avatar>
             {/* <img alt="camera" id = "camera"></img> */}
             <div id = "profile-1">
                 <div id = "div-first-name">
