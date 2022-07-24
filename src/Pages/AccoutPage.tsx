@@ -1,22 +1,22 @@
-import { ReactEventHandler, useState } from "react";
+import { ReactEventHandler } from "react";
+import { useNavigate } from "react-router-dom";
 import { ProfileCard } from "../Components/Card/ProfileCard"
 import { DropDown } from "../Components/Navbar/DropDown"
-import { PopupEmail } from "../Components/Popup/PopupEmail";
 
 export const AccountPage = (): JSX.Element => {
-    const [clickedEmail, setClickedEmail] = useState<boolean>(true);
+
+    const navigate = useNavigate();
 
     const buttonEditEmailHandler: ReactEventHandler = (event: React.FormEvent<HTMLInputElement>) => {
-        console.log("PING");
-        console.log(clickedEmail);
-        setClickedEmail(!clickedEmail);
+        navigate("/editemail");
     }
 
     const buttonEditPhoneNumber: ReactEventHandler = (event: React.FormEvent) => {
-
+        
     }
 
     const buttonEditPasswordHandler: ReactEventHandler = (event: React.FormEvent) => {
+        navigate("/editpassword");
     }
 
     const buttonCancelHandler: ReactEventHandler = (event: React.FormEvent) => {
@@ -26,10 +26,10 @@ export const AccountPage = (): JSX.Element => {
     const buttonConfirmHandler: ReactEventHandler = (event: React.FormEvent) => {
 
     }
+
     return (
         <div>
-            {clickedEmail && <PopupEmail handler = {buttonEditEmailHandler}></PopupEmail>}
-            {!clickedEmail && <div id = "dropdown-and-profilecard">
+            <div id = "dropdown-and-profilecard">
                 <DropDown></DropDown>
                 <ProfileCard 
                 buttonCancelHandler={buttonCancelHandler}
@@ -37,7 +37,7 @@ export const AccountPage = (): JSX.Element => {
                 buttonEditEmailHandler={buttonEditEmailHandler}
                 buttonEditPasswordHandler={buttonEditPasswordHandler}
                 buttonEditPhoneNumber={buttonEditPhoneNumber}></ProfileCard>
-            </div>}
+            </div>
         </div>
     )
 }

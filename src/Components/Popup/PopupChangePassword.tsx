@@ -1,33 +1,31 @@
-import { ChangeEvent, FormEvent, ReactEventHandler, useState } from "react"
-import { useNavigate } from "react-router-dom";
-import { ButtonComponent } from "../Button/ButtonComponent";
+import { FormEvent, ReactEventHandler } from "react"
+import { useNavigate } from "react-router-dom"
+import { ButtonComponent } from "../Button/ButtonComponent"
 import { FormControlComponent } from "../Form/FormControlComponent"
 
-export const PopupEmail = (): JSX.Element => {
+export const PopupChangePassword = (): JSX.Element => {
 
-    const [newEmail, setNewEmail] = useState<string>("");
     const navigate = useNavigate();
+    const changePasswordHandler: ReactEventHandler = (event: FormEvent<HTMLInputElement>) => {
 
-    const newEmailHandler: ReactEventHandler = (event: ChangeEvent<HTMLInputElement>) => {
-        setNewEmail(event.target.value);
     }
 
     const cancelButtonHandler: ReactEventHandler = (event: FormEvent<HTMLInputElement>) => {
         navigate("/account");
     }
 
-    return (
+    return(
         <div id = "popup-email">
             <div id = "popup-email-container">
-                <label><h3>Your Old Email</h3></label>
+                <label><h3>Your Old Password</h3></label>
                 <div id = "old-email-container">
-                    <p id = "old-email-value-popup">bcc@gmail.com</p>
+                    <p id = "old-email-value-popup">*************</p>
                 </div>
             </div>
             <div id = "popup-new-email-container">
-                <label><h3>Your New Email</h3></label>
+                <label><h3>Your New Password</h3></label>
                 <div>
-                    <FormControlComponent label = "" className = "" id = "new-email-input" placeHolder = "newemail@gmail.com" type="text" variant="filled" onChange={newEmailHandler}></FormControlComponent>
+                    <FormControlComponent label = "" className = "" id = "new-email-input" placeHolder = "newemail@gmail.com" type="text" variant="filled" onChange={changePasswordHandler}></FormControlComponent>
                 </div>
             </div>
             <div id = "buttons-popup-edit-password">
