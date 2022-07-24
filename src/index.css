@@ -876,3 +876,28 @@ a{
   color: black;
   font-weight: bolder;
 }
+
+#label-phone-number{
+  font-weight: bolder;
+}
+
+#container-new-phone-number{
+  position: absolute;
+  left: 30em;
+  top: 10em;
+}
+
+#buttons-editphonenumber{
+  position: absolute;
+  left: -3em;
+  top: 12em;
+}
+
+#input-edit-phone-number{
+  position: absolute;
+  top: 1em;
+  width: 20em;
+  height: 2em;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.96)), #000000;
+  border-radius: 8px;
+}

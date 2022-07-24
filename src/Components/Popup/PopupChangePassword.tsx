@@ -11,6 +11,7 @@ export const PopupChangePassword = (): JSX.Element => {
     }
 
     const cancelButtonHandler: ReactEventHandler = (event: FormEvent<HTMLInputElement>) => {
+        console.log("PING");
         navigate("/account");
     }
 
@@ -29,8 +30,8 @@ export const PopupChangePassword = (): JSX.Element => {
                 </div>
             </div>
             <div id = "buttons-popup-edit-password">
-                <ButtonComponent id="cancel-button-popup-email" className="cancel-button-popup-email" handler={undefined} variant="contained"><p id = "cancel-popup-email">Cancel</p></ButtonComponent>
-                <ButtonComponent id="save-button-popup-email" className="save-button-popup-email" variant="contained" handler={cancelButtonHandler}><p id = "save-popup-email">Save</p></ButtonComponent>
+                <ButtonComponent id="cancel-button-popup-email" className="cancel-button-popup-email" handler={cancelButtonHandler} variant="contained"><p id = "cancel-popup-email">Cancel</p></ButtonComponent>
+                <ButtonComponent id="save-button-popup-email" className="save-button-popup-email" variant="contained" handler={undefined}><p id = "save-popup-email">Save</p></ButtonComponent>
             </div>
         </div>
     )

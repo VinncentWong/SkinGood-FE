@@ -1,4 +1,4 @@
-import { ChangeEvent, FormEvent, ReactEventHandler, useState } from "react"
+import React, { ChangeEvent, FormEvent, ReactEventHandler, useState } from "react"
 import { useNavigate } from "react-router-dom";
 import { ButtonComponent } from "../Button/ButtonComponent";
 import { FormControlComponent } from "../Form/FormControlComponent"
@@ -31,8 +31,8 @@ export const PopupEmail = (): JSX.Element => {
                 </div>
             </div>
             <div id = "buttons-popup-edit-password">
-                <ButtonComponent id="cancel-button-popup-email" className="cancel-button-popup-email" handler={undefined} variant="contained"><p id = "cancel-popup-email">Cancel</p></ButtonComponent>
-                <ButtonComponent id="save-button-popup-email" className="save-button-popup-email" variant="contained" handler={cancelButtonHandler}><p id = "save-popup-email">Save</p></ButtonComponent>
+                <ButtonComponent id="cancel-button-popup-email" className="cancel-button-popup-email" handler={cancelButtonHandler} variant="contained"><p id = "cancel-popup-email">Cancel</p></ButtonComponent>
+                <ButtonComponent id="save-button-popup-email" className="save-button-popup-email" variant="contained" handler={undefined}><p id = "save-popup-email">Save</p></ButtonComponent>
             </div>
         </div>
     )

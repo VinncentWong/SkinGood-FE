@@ -12,7 +12,7 @@ export const AccountPage = (): JSX.Element => {
     }
 
     const buttonEditPhoneNumber: ReactEventHandler = (event: React.FormEvent) => {
-        
+        navigate("/editphonenumber");
     }
 
     const buttonEditPasswordHandler: ReactEventHandler = (event: React.FormEvent) => {
