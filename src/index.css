@@ -932,3 +932,37 @@ a{
   color: black;
   font-weight: bolder;
 }
+
+#user-address-content{
+  position: absolute;
+  top: 7em;
+  width: 60em;
+}
+
+.content-address{
+  display: flex;
+  flex-direction: 10px;
+  gap: 5em;
+  font-weight: bolder;
+}
+
+#phone-address-value{
+  position: absolute;
+  left: 12em;
+}
+
+#address-address-value{
+  position: absolute;
+  left: 12em;
+  white-space: initial;
+  width: 35em;
+  height: 5em;
+  overflow: hidden;
+}
+
+#address-card-container{
+  white-space: normal
+}
+.one{
+  color: white;
+}
