@@ -2,13 +2,13 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { PopupChangePassword } from './Components/Popup/PopupChangePassword';
 import { PopupEditPhoneNumber } from './Components/Popup/PopupEditPhoneNumber';
 import { PopupEmail } from './Components/Popup/PopupEmail';
-import { AccountPage } from './Pages/AccoutPage';
-import { AddAddress } from './Pages/AddAddress';
-import { LandingPage } from './Pages/LandingPage';
-import { LoginPage } from './Pages/LoginPage';
-import { MyAddressPage } from './Pages/MyAddressPage';
-import { RegisterPage } from './Pages/RegisterPage';
-
+import { AccountPage } from './Pages/User/AccoutPage';
+import { AddAddress } from './Pages/User/AddAddress';
+import { LandingPage } from './Pages/User/LandingPage';
+import { LoginPage } from './Pages/User/LoginPage';
+import { MyAddressPage } from './Pages/User/MyAddressPage';
+import { RegisterPage } from './Pages/User/RegisterPage';
+import { AccountPage as AdminProfile} from './Pages/Admin/AccountPage'
 function App() {
   return (
     <div id = "root">
@@ -23,6 +23,7 @@ function App() {
             <Route path="/editphonenumber" element={<PopupEditPhoneNumber></PopupEditPhoneNumber>}></Route>
             <Route path="/myaddress" element={<MyAddressPage></MyAddressPage>}></Route>
             <Route path="/addaddress" element={<AddAddress></AddAddress>}></Route>
+            <Route path="/admin/account" element={<AdminProfile></AdminProfile>}></Route>
           </Routes>
         </BrowserRouter>
     </div>

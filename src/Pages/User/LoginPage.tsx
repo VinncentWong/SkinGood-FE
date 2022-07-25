@@ -1,11 +1,11 @@
-import axios from "../Api/Api"
+import axios from "../../Api/Api"
 import { ChangeEvent, FormEvent, ReactEventHandler, useEffect, useState } from "react"
-import { ButtonComponent } from "../Components/Button/ButtonComponent"
-import { InformationComponent } from "../Components/Footer/Information"
-import { SubscribeNewsLetter } from "../Components/Footer/SubscribeNewsletter"
-import { FormControlComponent } from "../Components/Form/FormControlComponent"
-import { NavbarComponent } from "../Components/Navbar/NavbarComponent"
-import { NavbarTwo } from "../Components/Navbar/NavbarTwo"
+import { ButtonComponent } from "../../Components/Button/ButtonComponent"
+import { InformationComponent } from "../../Components/Footer/Information"
+import { SubscribeNewsLetter } from "../../Components/Footer/SubscribeNewsletter"
+import { FormControlComponent } from "../../Components/Form/FormControlComponent"
+import { NavbarComponent } from "../../Components/Navbar/NavbarComponent"
+import { NavbarTwo } from "../../Components/Navbar/NavbarTwo"
 import { AxiosPromise } from "axios"
 
 export const LoginPage = () => {
@@ -122,7 +122,7 @@ export const LoginPage = () => {
 }
 
 const LoginWithGoogleText = (): JSX.Element => {
-    const googleLogo = require("../Assets/google-icon.png");
+    const googleLogo = require("../../Assets/google-icon.png");
     return (
         <>
             <img src={googleLogo} alt="logo-google"></img>

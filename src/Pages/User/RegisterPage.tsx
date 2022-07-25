@@ -1,13 +1,13 @@
 import { Box, Checkbox, FormLabel, SelectChangeEvent } from "@mui/material"
-import { ButtonComponent } from "../Components/Button/ButtonComponent"
-import { ComboBoxComponents } from "../Components/Form/ComboBoxComponents"
-import { FormControlComponent } from "../Components/Form/FormControlComponent"
-import { NavbarComponent } from "../Components/Navbar/NavbarComponent"
-import { NavbarTwo } from "../Components/Navbar/NavbarTwo"
-import { SubscribeNewsLetter } from "../Components/Footer/SubscribeNewsletter"
-import { InformationComponent } from "../Components/Footer/Information"
+import { ButtonComponent } from "../../Components/Button/ButtonComponent"
+import { ComboBoxComponents } from "../../Components/Form/ComboBoxComponents"
+import { FormControlComponent } from "../../Components/Form/FormControlComponent"
+import { NavbarComponent } from "../../Components/Navbar/NavbarComponent"
+import { NavbarTwo } from "../../Components/Navbar/NavbarTwo"
+import { SubscribeNewsLetter } from "../../Components/Footer/SubscribeNewsletter"
+import { InformationComponent } from "../../Components/Footer/Information"
 import { ChangeEvent, ReactEventHandler, useState } from "react"
-import axios from "../Api/Api"
+import axios from "../../Api/Api"
 
 export const RegisterPage = () => {
     const [email, setEmail] = useState<string>("");
